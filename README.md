@@ -1,2 +1,3 @@
 # web_sketches
-To develop posts for blog, etc.
+The purpose of this repository is to keep R markdown documents for posting on
+web organized. Hopefully can upload some more soon!
