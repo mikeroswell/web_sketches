@@ -1,0 +1,36 @@
+---
+title: "unicode_in_ggplot"
+output: 
+  rmarkdown::pdf_document: 
+    fig_width: 3
+    fig_height: 3
+    latex_engine: xelatex
+  rmarkdown::html_document:
+    fig_width: 3
+    fig_height: 3
+    fig.retina: NULL
+  rmarkdown::html_vignette: 
+    fig_width: 3
+    fig_height: 3
+  word_document: default
+vignette: >
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+```
+
+In the `.rmd` file I'd like to be able to render to
+`pdf_document`. 
+
+```{r unicode failure}
+mtcars %>% ggplot(aes(cyl, mpg))+
+  geom_point()+
+  labs(title= "I can print kappa: \u03ba and ell: \u2113")+
+  theme_classic()
+
+```
+
