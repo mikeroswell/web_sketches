@@ -1,14 +1,12 @@
 # load library
 library(ggplot2)
 
-# OP example up to adding text to plot
+# example plot
 df <- data.frame("x" = c(1,2,3,4),"y" = c(15,19,35,47))
 
 p <- ggplot(df, aes(x,y)) + 
   geom_point(size=1) +
-  geom_smooth(method = "lm", se=FALSE, formula=y~x) + 
-  xlab("Better Resolution") +
-  ylab("Better Resolution")
+  geom_smooth(method = "lm", se=FALSE, formula=y~x) 
 
 # lousy resolution from geom_text
 
